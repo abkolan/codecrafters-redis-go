@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "app/__debug_bin*": true,
+        "**/bin*": true,
+        "**/.idea*": true
+    }
+}
