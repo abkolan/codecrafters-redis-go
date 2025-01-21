@@ -1,3 +1,4 @@
+// Package main implements a simple Redis server.
 package main
 
 import (
@@ -34,8 +35,9 @@ func main() {
 		fmt.Printf("New connection from %s\n", conn.RemoteAddr().String())
 		wg.Add(1)
 		go handleConnection(conn, &wg)
+		wg.Wait()
 	}
-	wg.Wait()
+
 }
 
 func closeListener(ln net.Listener) {
