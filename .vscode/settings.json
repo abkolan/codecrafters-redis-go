@@ -14,11 +14,17 @@
   "editor.inlayHints.fontSize": 14,
   "go.formatTool": "goimports",
   "go.formatFlags": ["-w", "-local"],
-  "go.lintTool": "revive",
+  "go.lintOnSave": "package",
+  "go.lintTool": "golangci-lint",
+  "go.useLanguageServer": true,
   "git.autoRepositoryDetection": false,
   "git.confirmSync": false,
   "go.testFlags": ["-v"],
   "gopls": { "ui.semanticTokens": true },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": { "source.organizeImports": "always" }
+  },
   "editor.tokenColorCustomizations": {
     "[*]": {
       "textMateRules": [
